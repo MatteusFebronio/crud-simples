@@ -21,8 +21,8 @@ body {
  }
 
  a{
-   text-decoration: none;
-   color: white;
+            text-decoration: none;
+color: white;
  };
 
 
@@ -46,23 +46,26 @@ body {
            padding: 30px;
            border: 1px solid #2746f3;
            border-radius: 40px;
-           box-shadow: 0 0 20px rgba(23, 4, 133, 0.329);
+           box-shadow: 0 0 20px rgba(255, 10, 10, 0.1);
            margin-right: 60%;
            height: 30%;
-           right: 500px;
+          right: 500px;
 
          }
+         
          label {
            display: block;
            margin-bottom: 25px;
            color: white;
          }
+
          input {
            width: 100%;
            padding: 8px;
            margin-bottom: 12px;
            box-sizing: border-box;
          }
+
          div {
        position: absolute;
        top: 30px;
@@ -72,6 +75,7 @@ body {
        border-radius: 10px;
        box-shadow: 0 0 10px rgb(255, 255, 255);
      }
+
          .h11{
        margin: 0;
        color: white;
@@ -80,6 +84,8 @@ body {
        height: 50px;
        margin-left: 10%;
      }
+
+
          button {
            background-color: #2b66d3;
            color: white;
@@ -95,6 +101,7 @@ body {
          button:hover {
            background-color: #5b95d6;
          }
+
          .body2 {
            margin: 0;
            padding: 0;
@@ -104,16 +111,19 @@ body {
            align-items: center;
            background: linear-gradient(to right, black, darkblue);
        }
+
        .video-container {
            flex: 1;
            display: flex;
            justify-content: center;
            align-items: center;
        }
+
        video {
            max-width: 100%;
            height: auto;
        }
+
        .content {
            text-align: center;
            color: white;

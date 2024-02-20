@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="indexstyle.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Filmes ON</title>
 </head>
 <body>
@@ -12,20 +14,26 @@
 <h1><a href="/" class="Canto"> Filmes ON </a></h1>
 
 <li>
-    <form>
-
+    <form th:action="@{/login}" method="post">
         <h1 class="h11">Login</h1>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="username" required>
 
         <label for="email">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
+        <input type="password" id="senha" name="password" required>
 
-        <button type="submit"><a href="/">Entrar</a></button>
+
+        <button type="submit" value="Entrar">Entrar</button>
         <button type="button"><a href="cad_pessoa">Cadastro</a></button>
     </form>
 
+
+    <a sec:authorize="hasRole('ROLE_ADMIN')" href="admin">ADMIN</a><br><br>
+
+    <a sec:authorize="hasRole('ROLE_USER')" href="user-comum">USUÁRIO COMUM</a><br><br>
+    
+    <a sec:authorize="isAuthenticated()" href="user-comum">Qualquer um autenticado</a><br><br>
 
 </li>
 </body>

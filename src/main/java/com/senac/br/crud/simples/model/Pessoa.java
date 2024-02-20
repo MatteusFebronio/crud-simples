@@ -5,6 +5,21 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.management.relation.Role;
+import java.nio.file.attribute.FileAttribute;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Pessoa {
 
@@ -13,38 +28,9 @@ public class Pessoa {
     private Integer id;
     private String nome;
     private String email;
-
     private String senha;
 
-    public String getSenha() {
-        return senha;
-    }
+    @Enumerated(EnumType.STRING)
+    private RoleEnum role;
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
